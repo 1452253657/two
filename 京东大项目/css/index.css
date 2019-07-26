@@ -1,0 +1,36 @@
+/* header部分开始 */
+.w{
+    position: relative;
+
+}
+header{
+    width: 100%;
+    background:#e20f00;
+   
+
+}
+header .iconfont{
+    font-family: "iconfont";
+    position:absolute; 
+    right: 5px;
+    top:5px;
+    background: rgba(0, 0, 0,0.2 );
+    color:#fff;
+    font-size:20px;
+
+}  
+/* header部分结束 */
+.huluwa{
+    width: 100%;
+    height: 30px;
+    background: #e3e4e5;
+    line-height:30px;
+    border-bottom: 1px solid #ddd;
+    color:#999;
+    font-size:15px;
+}
+/* .huluwa-left .icofont{
+    font-
+
+}
+ */
