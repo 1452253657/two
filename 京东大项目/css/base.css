@@ -51,7 +51,7 @@ body {
     font: 12px/150% Arial, Verdana, "\5b8b\4f53";
      /*unitedCode��д���������д��*/
     color: #666; /*150%���ڵ�ǰ����ߴ�İٷֱ��м��*/
-    background: #fff;
+    background: #f6f6f6;
 }
 
 .clearfix:before, .clearfix:after {
@@ -100,9 +100,9 @@ s, i, em {  /*һ������װ������*/
     text-decoration: none;  /*ȥ���»��߻���ɾ����*/
 }
 
-/* .col-red {
-    color: #C81623 !important;/*������ɫ��
-} */
+.col-red {
+    color: #f10215 !important;/*������ɫ��*/
+}
 
 /*������*/
 .w {
