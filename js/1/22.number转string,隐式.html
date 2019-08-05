@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+// number类型转成string也有内神万式：
+//1.隐式转换
+   /* var  a = 2;
+    a = a+"";
+    console.log(a);
+    console.log(typeof a);
+
+    var num = 200;
+    num = num+"  ";
+    console.log(num);
+    console.log(typeof num);*/
+
+//2.显示转化（强制类型转换）
+   // 大部分对象都有两个方法： toString()   String();
+
+    var num1 =200;
+    num1 = num1.toString();
+    console.log(num1);
+    console.log(typeof num1);
+    
+    var u = undefined;
+//        u = u.toString();//对于undefined使用toString()是不能转换成string类型。
+//        u = u+"";   //使用隐式转换能将undefined转成string类型
+//        u = String(u);
+//        console.log(u);
+//        console.log(typeof u);
+
+var n = null;
+//        n = n + "";  //使用隐式转换可以将null类型转换成string类型。
+         //n = n.toString();//null类型转换成string类型不能使用toString();
+        n = String(n);
+        console.log(n);
+        console.log(typeof n);
+
+//      注意：几乎所有的对象都有toString()这个方法。
+//      但是对于undefined和null这个两个对象是没有toString()这个方法。
+//      所以这两个对象转成string类型的时候，如果是使用强制类型转换的话，
+//      必须使用String()这个方法来做转换
+
+
+
+</script>
+

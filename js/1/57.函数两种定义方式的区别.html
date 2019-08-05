@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+        function fn(){
+            console.log("这是直接定义函数的方式");
+        };
+        var f1;   //就是一个全局变量
+    
+    //    第一种：
+    //        定义函数：
+    
+    //        function 函数名(){
+    //            要执行的代码
+    //        }
+    
+    //        第二种：
+    //            函数表达式定义函数
+    
+    //        var f1 = function(){
+    ////            要执行的代码
+    //        }
+    
+    //    注意：
+    //        直接定义函数的方式，一般常用的就是这种直接定义函数。
+    //        函数表达式定义函数的方式一般用于事件和定时器
+    
+    
+    //    在js中有一个预解析的机制。当程序在运行的时候，浏览器会先将js代码扫描一遍，在这个过程中，会将定义的函数和变量提升到全局作用域。
+    //        作用域：
+    //            全局作用域（全局变量）   ：就是script标签中的就是全局作用域，或者是不适用var声明的变量
+    //            局部作用域（局部变量）：在函数体内的变量，局部变量
+        fn();
+    //    function fn(){
+    //        console.log("这是直接定义函数的方式");
+    //    }
+    
+        console.log(f1);//输出为undefined
+        f1();//这里没有赋值
+         f1 = function(){
+            console.log("这是函数表达式的方式定义函数");
+        }
+    //    f1();
+    
+    
+    
+    //    注意：定义函数的两种方式都可以使用，而且都能实现效果，但是在使用函数表达式这种方式定义函数的时候，一定要先定义，然后在其后面使用
+    </script>

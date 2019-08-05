@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    //要求将数组中的0项去掉，将不为0的值存入一个新的数组，生成新的数组
+    //  [10,12,3,4,86,897,0,31,0,48,0,"hello",0]
+
+ //  var nums = [10, 12, 3, 4, 86, 897, 0, 31, 0, 48, 0, "hello", 0];
+ //  var newNums = [];
+ //  for (var i = 0; i < nums.length; i++) {
+ //      //  console.log(nums[i]);// 拿到的是数组中的每一项
+ //      if (nums[i] != 0) {
+ //          newNums[newNums.length] = nums[i];
+ //      }
+ //  }
+ //  console.log(newNums);
+
+
+
+ //翻转数组[10,50,40,60,30,45]
+    var arr =[10,50,40,60,30,45];
+    for(var i=0;i<arr.length/2;i++){
+        var tenp;
+        temp = arr[i];
+        arr[i] = arr[arr.length-1-i];
+        arr[arr.length-1-i] = temp;
+    }
+    console.log(arr);
+
+
+
+</script>

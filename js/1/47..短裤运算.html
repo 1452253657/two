@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    var a = 123 && 456;
+    console.log(a);
+
+    var b = true && false;
+    console.log(b);
+    // &&：如果两边不是Boolean类型的值，那么他作为短路运算的时候，如果第一个值是true，则直接返回第二个值，不管第二个值是什么. (找假)
+
+
+    var res = "abc" && 0;    //在这里会默认做一个隐式转换，将这些值隐式转换成Boolean类型的值。
+        console.log(res);
+
+    var c = 0 || false;
+    console.log(c);
+
+
+
+
+//    || 当他两边都不是Boolean类型的值的时候，这个时候他作为短路运算符，如果第一个值转化为Boolean类型的值结果是true，那么就直接返回这个值，如果第一个值转换成Boolean类型的结果是false，那么就直接返回第二个值，不管第二个值是什么类型。（找真）
+
+    var d = 0 || false;
+    console.log(d);
+
+    var e = 0 ||"你好";
+    console.log(e);
+
+
+
+
+
+
+</script>

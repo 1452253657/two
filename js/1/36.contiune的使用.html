@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //计算1-100之间奇数的和  偶数
+  // var i =1;
+  // var sum =0;
+  // while(i<=100){
+  //     if(i%2 ==0){
+  //         i++;
+  //         continue;
+  //     }
+  //     sum +=i
+  //     i++;
+  // }
+  // alert(sum);
+
+    //注意：continue跳出本次循环，进入下次循环
+    //break：跳出整个循环。
+
+
+
+
+    //计算1-100之间除了能被7整除之外所有的整数和。
+
+    var i = 1;
+    var sum = 0;
+    while(i<=100){
+        if(i%7 == 0){
+            i++;
+            continue;
+        }
+        sum +=i;
+        i++;
+    }
+    alert(sum);
+</script>

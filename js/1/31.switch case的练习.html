@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    //对学员的结业考试成绩评测（改成用Switch来做）
+    //成绩>=9e:A
+    //90>成绩>=8e:B
+    //80>成绩>=7e:C
+    //70>成绩>=68：D
+    //成绩<60：E
+
+    var score = +prompt("请输入你的成绩");
+    var level = parseInt(score/10);
+    switch (level ) {
+        case 10:
+            alert("A");
+            break;
+        case 9:
+            alert("A");
+            break;
+        case 8:
+            alert("B");
+            break;
+        case 7:
+            alert("C");
+            break;
+        case 6:
+            alert("D");
+            break;
+        default :
+            alert("E");
+            break;
+    }
+    
+
+//    if-else if与switch的比较（S）
+//相同点：都可以实现多分支结构
+//不同点：
+//-if-else if：可以处理区间范围
+//-switch：一般只能用于定值比较
+//三者的区别：
+//if有条件的执行一条语句
+//if-else有条件的执行一条或另一条语句
+//switch有条件的执行一组语句中的一条语句
+
+
+
+</script>

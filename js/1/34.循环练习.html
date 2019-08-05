@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+//输入班级人数，然后依次输入学员成绩，
+//计算班级学员的平均成绩和总成绩
+
+/*var num = +prompt("请输入班级人数");
+zcj：总成绩   zj：个人成绩   num：人数
+    var zcj = 0;
+    var i = 1;
+    while(i<=num){
+        var cj = +prompt("请输入成绩");
+        zcj += cj;
+        i++;
+    }
+        console.log("总成绩为："+zcj);
+        console.log("平均成绩为："+zcj/num);*/
+
+      //  老师问学生，这道题你会做了吗？如果学生答”会了（y）"，则可以放学。如果学生不会做（n），
+      //则老师再讲一遍，再问学生是否会做了. 直到学生会为止，才可以放学.
+
+            var ans = prompt("这道题你会不会做？y/n");
+            var i =0;
+            while(ans !="y" && i<10){
+               ans = prompt("这道题你会不会做？y/n");
+               i++;//改变循环条件
+            }
+            alert("可以滚了你");
+
+
+
+
+</script>

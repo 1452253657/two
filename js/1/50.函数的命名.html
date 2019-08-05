@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>  命名规范：函数名尽量小写，最好是一个动词，
+        参数名开头小写，参数名、变量名要有意义，
+        如果函数名有多个单词的话，推荐使用Camel命名法：
+        如：getSum();getMax();等
+    
+</body>
+</html>
+<script>
+    function getMax(num1,num2){  //在这里num1，和num2就是函数中形参
+        if(num1>num2){
+            console.log(num1);
+        }else{
+            console.log(num2);
+        }
+       
+    }
+    getMax(10,45);//在这里传进来的参数就是实参
+
+
+
+    //在使用定义使用函数的时候，尽量做到每个函数的功能单  原因：保证代码的可拓展性
+
+
+
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+//函数的几种形式：
+//1.无参数无返回值；
+//2.无参数有返回值
+//3.有参数无返回值
+//4.有参数有返回值
+
+function tellStory(){
+    console.log("从前有座山");//这只是函数运行的结果
+}//无参数无返回值；
+
+function getMax(num1,num2){
+        if(num1>num2){
+             return num1;
+        }else{
+           return num2;
+        }
+    }
+    var res = getMax(42,34);
+    console.log(res);
+//有参数有返回值
+
+    function killer(name){
+        console.log(name+"打死了小明");
+    }
+    var res2 = killer("小红");
+    console.log(res2);
+//有参数无返回值
+</script>

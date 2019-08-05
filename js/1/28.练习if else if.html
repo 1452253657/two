@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    // 比较3个数字的大小不考虑相等打印出最大的一个
+
+    /*var num1 = +prompt("请输入一个数字");
+     var num2 = +prompt("请输入一个数字");
+     var num3 = +prompt("请输入一个数字");
+     if(num1>num2 && num1>num3){
+      console.log(num1);
+     }else if(num2>num3){
+         console.log(num2);
+     }else{
+         console.log(num3);
+     }*/
+
+    //练习1：提示用户输入密码，如果密码是“888888”则提示正确，否则要求再输入一次，
+    //如果密码是“88888”则提示正确，否则提示错误，否则要求再输入一次，如果密码是“88888”则提示正确，否则提示错误程序结束。（如果我的密码里有英文还要转换吗，密码：abc1）
+
+    var userPwd = prompt("请输入密码");
+    if (userPwd == "888888") {
+        console.log("登录成功");
+    } else {
+        userPwd = prompt("密码错误，请重新输入");
+        if (userPwd == "888888") {
+            console.log("登录成功");
+        } else {
+            userPwd = prompt("密码错误，请重新输入");
+            if (userPwd == "888888") {
+                console.log("登录成功");
+            } else {
+                alert("密码错误，账号被锁定");
+            }
+        }
+    }
+
+    
+
+
+</script>
