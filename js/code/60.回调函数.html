@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+ /**
+     * 回调函数：将函数作为一个参数参到另一个函数
+     * 构造函数：用来创建一个对象。
+     */
+
+
+     var res = function(a){   //函数也是一种数据类型，只不过是对象中的一等公民
+        if(typeof a == "function"){
+            a();
+        }else{
+            console.log(a);
+        }
+    }
+
+
+//    console.log(typeof res);
+
+
+    function fn(){
+        console.log("这是一个普通的函数");
+    }
+//    fn();
+
+//    res("aaa");
+//    if(a == function){
+//        res(a);
+//    }
+
+//    res(fn)
+
+    res("abc");
+
+
+
+</script>

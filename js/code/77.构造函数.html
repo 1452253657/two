@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    //  function createStu(name,age,gander,address,tel) {
+    //      var obj = new Object();
+    //
+    //      obj.name = name;
+    //      obj.age = age;
+    //      obj.gander = gander;
+    //      obj.address = address;
+    //      obj.tel = tel;
+    //      obj.SayHi = function () {
+    //          console.log("我叫" + obj.name + "，我今年" + obj.age + "岁，我是" + obj.gander + "生，我来自" 
+    //  + obj.address + "，我的电话是" + obj.tel + ".");
+    //      }
+    //      return obj;
+    //  }
+    //  console.log(createStu("小葵花",23,"男","广州","123456789010").name);
+    //  console.log(createStu("小葵花",23,"男","广州","123456789010").SayHi());
+    //
+
+ //  function createStu(name, age, gander, address, tel) {
+ //      //var obj = new Object();
+//
+ //      this.name = name;       //this：在这里就表示的是当前的这个对象
+ //      this.age = age;
+ //      this.gander = gander;
+ //      this.address = address;
+ //      this.tel = tel;
+ //      this.SayHi = function () {
+ //          console.log("我叫" + obj.name + "，我今年" + obj.age + "岁，我是" + obj.gander + "生，我来自"
+ //              + obj.address + "，我的电话是" + obj.tel + ".");
+ //      }
+ //  }
+ //  var obj = new createStu("张三", 20, "男", "玉林", "123456789011")
+ //  //hew：
+ //  //1.创建了一个新的对象
+ //  //2.将这个对象中的this指向了这个对象
+ //  //3.将创建的这个对象返回回来
+ //  console.log(obj);
+ //  console.log(obj.SayHi());
+
+
+        function Student(name,age,gander,address,tel) {
+           //  var obj = new Object();
+        
+          this.name = name;
+          this.age = age;
+          this.gander = gander;
+          this.address = address;
+          this.tel = tel;
+          this.SayHi = function () {
+                 console.log("我叫" + obj.name + "，我今年" + obj.age + "岁，我是" + obj.gander + "生，我来自" 
+         + obj.address + "，我的电话是" + obj.tel + ".");
+             }
+           //  return obj;
+         }
+         var stu = new Student("王五",30,"男","北京","1341514614651");
+         console.log(stu.name);
+
+
+
+
+</script>

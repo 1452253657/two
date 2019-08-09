@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+
+var arr = [2, 3, 4, 6, 1, 7, 10, 16, 13, 9, 17, ];
+var arr1 = [2, 33, 47, 68, 1, 7, 10, 16, 13, 9, 17, ];
+var arr2 = [2, 23, 54, 6, 1, 7, 10, 16, 13, 9, 17, ];
+//  console.log(arr);
+ 
+function aaa(arg){ 
+    if(Object.prototype.toString.call(arg) !== '[object Array]'){
+        console.log('请传入一个数组');
+        return 
+    }
+
+    let arr = arg 
+    
+    for(var i = 0,len = arr.length; i < len; i++){
+        for( var k = 0; k < arr.length -1 - i ; k++ ){
+                if(arr[k] >arr[k+1]){
+                    let a = arr[k]
+                    arr[k] = arr[k + 1]
+                    arr[k+1] = a
+                }
+            }
+    } 
+    
+    return arr
+}
+let a = aaa(arr) 
+console.log(a);
+
+let ddd = {
+        a:1, //jianzhidui
+        b:'33',
+        c:[1,2,3,4],
+        d:{x:1,y:2},
+        e:function(){return 'xiezhian'}
+    } 
+
+    for(let key in ddd){
+        console.log(key);
+        console.log(ddd[key]);
+        
+    }
+let data = [
+    {a:0,b:2},
+    {a:1,b:2},
+    {a:1,b:2},
+    {a:1,b:2},
+    {a:1,b:2},
+    {a:1,b:2},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+    {a:4,b:6},
+]
+
+for(var i = 0; i<data.length;i++){
+    console.log(data[i]);
+    
+}
+
+
+
+
+
+
+    // let ddd = {
+    //     a:1, //jianzhidui
+    //     b:'33',
+    //     c:[1,2,3,4],
+    //     d:{x:1,y:2},
+    //     e:function(){return 'xiezhian'}
+    // } 
+
+    // for(let key in ddd){
+    //     console.log(key);
+    //     console.log(ddd[key]);
+        
+    // }
+
+// [2, 3, 4, 1, 6, 7, 10, 13, 9, 16, 17]
+// [2, 3, 1, 4, 6, 7, 10, 9, 13, 16, 17]
+// [2, 1, 3, 4, 6, 7, 9, 10, 13, 16, 17]
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+    
+
+
+
+</script>

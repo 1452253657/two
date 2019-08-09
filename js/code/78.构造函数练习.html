@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+
+    //创建一个汽牛对象用来描述我们的汽车
+    //汽车：
+    //brand type price color drive
+
+    function car(brand, type, price, color) {
+        this.brand = brand;
+        this.type = type;
+        this.price = price;
+        this.color = color;
+        this.drive = function () {
+            console.log("我有一辆" + this.brand + "车，是" + this.type + "." + this.price + "RMB，" + this.color + "色");
+        }
+    }
+    var car = new car("宝马", "x7", "12000k", "天空蓝");
+    car.drive();
+
+   // 创建一个手机对象用来描述我们的手机
+   // 手机
+   // brand type price.color cal1
+
+   function Phone(brand, type, price, color) {
+        this.brand = brand;
+        this.type = type;
+        this.price = price;
+        this.color = color;
+        this.call = function () {
+            console.log("我有一" + this.brand + "车，是" + this.type + "." + this.price + "RMB，" + this.color + "色");
+        }
+    }
+    var car = new car("iphone", "x", "100k", "土豪金");
+   phone.call();
+</script>

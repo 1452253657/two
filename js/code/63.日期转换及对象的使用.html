@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    var date=new Date（2005，10，1）；
+    ·可以接受参数
+    -2005，10，1日期的每一部分
+    -“2005-10-1"字符串的日期格式
+    -表示日期的毫秒形式1128096000000
+
+    var date=Date.parse（"2005-10-1"）；
+    ·把字符串或2005，10，1日期的每一部分转换成日期的毫秒形式，
+    如果字符串的格式不是时间的正确格式返回NaN
+</body>
+
+</html>
+<script>
+    //转换
+    //var date = +new Date(2005,10,1);//创建一个时间对象
+
+//    时分秒之间进制：60
+//    秒和毫秒之间的进制：1000
+
+    //console.log(date);  //因为外国人的月份是从0开始   1 2 3 0 1 2  时间本身就是一个13位的数字
+
+
+   var date = +new Date("2017-10-7");
+    // var date = +new Date("abc");
+    console.log(date);
+
+     //日期对象的使用：
+     var date = +new Date();
+    console.log(date);   //在不同的浏览器中是存在兼容问题的。
+
+    var date1 = Date.now();  //html5中新增的方法
+    console.log(date1);
+
+
+
+
+
+
+
+
+
+
+</script>
