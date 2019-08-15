@@ -1,25 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
 <script>
-  //提示用户输入用户名，然后再提示输入密码，如果用户名是“admin”并且密码是“88888，则提示正确，否则，如果用户名不是admin还提示用户用户名不存在，如果用户名是admin则提示密码错误。
-  var userName= prompt("请输入用户名");
-  var userPwd= prompt("请输入用户密码");
-  if(userName=="admin"&&userPwd=="888888"){
-        alert("登录成功");
-    }else if(userName != "admin"){
-        alert ("用户不存在，请注册");
-    }else if(userPwd != "888888"){
-        alert("密码错误");
+    //提示用户输入用户名，然后再提示输入密码，如果用户名是“123456”并且密码是“123456，则提示正确，
+    //否则，如果用户名不是123456还提示用户用户名不存在，如果用户名是123456,则提示密码错误。否则要求再输入一次，
+    //，否则提示错误，否则要求再输入一次，如果密码是“88888”则提示正确，否则提示错误程序结束。
+    var userName = prompt("请输入用户名");
+    var userPw
+    if(userName === "123456"){
+        userPwd = prompt("请输入用户密码");
+    }
+    if (userName !== "123456") {
+        alert("用户不存在");
+    }
+    else if (userName == "123456" && userPwd == "123456") {
+        alert("登陆成功");
+    } else if (userName == "123456" && userPwd !== "123456") {
+        userPwd = prompt(" 密码错误，请重新输入");
+        if (userPwd == "123456") {
+            alert("登陆成功");
+        } else {
+            userPwd = prompt(" 密码错误，请重新输入");
+            if (userPwd == "123456") {
+                alert("登陆成功");
+            }else{
+                alert("密码错误，账号被锁定");
+            }
+        }
     }
 
 </script>

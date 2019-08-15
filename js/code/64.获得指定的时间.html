@@ -20,18 +20,29 @@
    // getFullYear()   //返回4位的年份  如 2016
 
 
-    var date = new Date();//先实例化一个对象
+  //  var date = new Date();//先实例化一个对象
+ //
+  // console.log(date.getTime());
+  // console.log(date.getMilliseconds());//拿到毫秒数
+  // console.log(date.getSeconds());//拿到秒数
+ //
+  // console.log(date.getMinutes());//拿到分钟数
+  // console.log(date.getHours());//拿到小时数
+ //
+  // console.log(date.getDay());//外国人的周表示是：0-6
+  //  console.log(date.getDate());//拿到当前月的当前这天数
+//
+  //  console.log(date.getMonth()+1);  //表示月份：0 1 2 3 …………11  中国的要加1
+  //  console.log(date.getFullYear()); //拿到当前的年
+  setInterval(function(){
+    var date = new Date();
+    var d = ["日","一" ,"二","三", "四"," 五","六"]
+    var  s = date.getSeconds()<10? "0"+date.getSeconds():date.getSeconds()
+    var a =date.getFullYear()+ "-"+(date.getMonth()+1) +"-"+date.getDate()+ " " +"星期"+d[date.getDay()]+" "+date.getHours()+":"+date.getMinutes()+":"+s
+        
 
-    console.log(date.getTime());
-    console.log(date.getMilliseconds());//拿到毫秒数
-    console.log(date.getSeconds());//拿到秒数
-
-    console.log(date.getMinutes());//拿到分钟数
-    console.log(date.getHours());//拿到小时数
-
-    console.log(date.getDay());//外国人的周表示是：0-6
-    console.log(date.getDate());//拿到当前月的当前这天数
-
-    console.log(date.getMonth());  //表示月份：0 1 2 3 …………11
-    console.log(date.getFullYear()); //拿到当前的年
+    console.log(a);
+  }, 1000);
+    
+    // this
 </script>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    var arr = [
+        { name: '黎姿', pen: 69, interview: 82.6 },
+        { name: '车佩均', pen: 68, interview: 82.6 },
+        { name: '李淑兰', pen: 67, interview: 79.2 },
+        { name: '罗敏华', pen: 66, interview: 82.8 },
+        { name: '张媛容', pen: 65, interview: 66.4 },
+        { name: '朱晓婷', pen: 64, interview: 79.8 },
+        { name: '李群佩', pen: 64, interview: 82.2 },
+        { name: '刘小萌', pen: 64, interview: 84.2 },
+        { name: '蓝玉琼', pen: 64, interview: 86 }
+    ];
+    // 分数等于笔试*30%+面试*70%
+   // function sss(arr) {
+        for (var i = 0; i < arr.length; i++) {
+            var p = arr[i].pen;
+            var int = arr[i].interview;
+            var sum = 0;
+            sum = p * 0.3 + int * 0.7;
+            arr[i].sum = +sum.toFixed(2)
+        }
+   
+    //先遍历数组，拿到每一项
+    //根据每一项，算出总分
+    //将总分添加一个属性赋到每一项
+    for (var i = 0; i < arr.length; i++) {
+        for (var j = 0; j < arr.length - 1 - i; j++) {
+            if (arr[j].sum < arr[j + 1].sum) {
+                var temp = arr[j]
+                arr[j] = arr[j + 1]
+                arr[j + 1] = temp
+            }
+        }
+    }
+    //根据总分来排序
+    //先遍历数组，两次
+    //进行比较
+    //设第三个变量，用来交换
+    for (var i = 0; i < arr.length; i++) {
+        arr[i].bb = `名${i + 1}次`
+
+    }
+    //根据总分的大小，排列名次
+    //遍历数组
+    //添加属性 名次
+   // return arr
+
+//}
+    //返回处理过的数组
+    //sss(arr1)
+    console.log(arr);
+
+
+
+
+
+
+
+    // sss(arr1)
+    //console.log(arr1);
+
+
+
+
+
+    var a = { x: 3, y: 5 };
+    a.c = 9;
+    a.e = 4;
+    console.log(a);
+    var a = '777'
+    var c = '666'
+    console.log(`${a}是${c}他哥`);
+    //拼接字符串
+    console.log(a + '是' + c + '的他哥');
+
+
+
+    var y = "a,bc,fgh"
+    //y= y.slice(1,4);
+    //console.log(y);
+    var arr7 = y.split(',');
+    console.log(arr7);
+    y = arr7.join('/');
+    console.log(y);
+
+
+    var kk = [4, 5, 1, 2, 6, 79, 3, 7]
+    var str = kk.join(',');
+    console.log(str);
+    kk = str.split();
+    console.log(kk);
+
+
+
+
+
+
+</script>

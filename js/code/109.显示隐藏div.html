@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box {
+            background-color: red;
+            width: 300px;
+            height: 300px;
+        }
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="隐藏" id="btn"><br>
+    <div id="box"></div>
+
+
+
+    <script>
+        // 1获取元素
+        // 2给按钮添加事件
+        // 3控制div的显示隐藏
+        // 4改变按钮中的文字
+        var btn = document.getElementById('btn');
+        var flag = true;
+        btn.onclick = function(){
+            var box = document.getElementById('box');
+            //为什么DOM对象的对应的标签的class属性的名字叫做c1assName，
+         //  应为class在js中是关键字关键字不可以作为变量或者属性的名字
+            if(flag){
+                box.className = 'hidden'
+                this.value ='显示';//this找到事件源
+                flag =false;
+            }else {
+                box.className ='show'
+                this.value ='隐藏'
+                flag =true;
+            }
+            //设置按钮对应的元素
+            //btn.value ='显示'; 
+        }
+
+
+
+
+//this的几种情况
+            //1普通函数中的this->window
+            //2构造函数中的this->是当前构造函数创建的对象
+            //3方法中的this->方法所属的对象
+    </script>
+</body>
+
+</html>

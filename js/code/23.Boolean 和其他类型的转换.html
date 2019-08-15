@@ -11,57 +11,67 @@
 </body>
 </html>
 <script>
-        //    string类型转换成Boolean的值：
-        //        1.隐式转换
-        //        var num = "linwei";
-        //        var num = "";//当是一个空字符串的时候，转换成Boolean的值的时候，转换成了false。
-        //        var num = " ";//将字符串类型转换成Boolean类型的时候，只有是非空的字符串都转成true，空字符串转换成立false。
-        //        num = !!num;
-        //        console.log(num);
-        //        console.log(typeof num);
+         // string类型转换成Boolean的值：
+         //      1.隐式转换
+         //      var n = "huluwa";
+         //      n = !!n ;//转换方法 ！！
+         //      console.log(n);//true
+         //      console.log(typeof n);//boolean
+         //       //当是一个空字符串的时候，转换成Boolean的值的时候，转换成了false。
+         //      var n1 = "";//将字符串类型转换成Boolean类型的时候，只有是非空的字符串都转成true，空字符串转换成立false。
+         //      n1 = !!n1 ;
+         //      console.log(n1);//false
+         //      console.log(typeof n1);//boolean
         
         
-        //    Boolean转成string
-        //        var res = true;
-        //        res = res+ "";//使用隐式转换将Boolean类型转成string类型
-        //        res = res.toString();//通过强制类型将Boolean类型转换成string类型
-        //        res = String(res);
-        //        console.log(res);
-        //        console.log(typeof res);
-        
-        //    number类型转Boolean
-        //        注意：number类型转成Boolean的时候，只要是非0的数字转换都是true，只有0会转换成false
-        //    var a = 10;
-        //    var a = 1;
-        //    var a = 0;
-        //    var a = -1;        0 1 01
-        //    a = !!a;
+           // Boolean转成string
+             //  var res = true;
+             //  res = res+ "";//使用隐式转换将Boolean类型转成string类型
+             //  console.log(typeof res);
+             //  res = res.toString();//通过强制类型将Boolean类型转换成string类型
+             //  console.log(typeof res);
+             //  res = String(res);
+             //  console.log(res);
+             //  console.log(typeof res);
+      //  
+      // number类型转Boolean
+      // 注意：nber类型转成Boolean的时候，只要是非0的数字转换都是true，只有0会转换成false
+      //   var a = 10;
+      //   console.log(typeof a);//number
+      //  //var a = 1;
+      //  //var a = 0;
+      //  //var a = -1;      //  0 1 01
+      //   a = !!a;
+      //   console.log(a);
+      //   console.log(typeof a);//boolean
         //
-        //
-        //    console.log(a);
-        //    console.log(typeof a);
+          // boolean转换成number
+          //     var res = true;
+          //     var res = false;
+          //     res = +res;
+          //     console.log(typeof res);//number
+          //     res = Number(res);
+          //     console.log(typeof res);//number
+          //     res = parseInt(res);
+          //     console.log(res);//0
+          //     console.log(typeof res);//number
         
-        //    boolean转换成number
-        //        var res = true;
-        //        var res = false;
-        //        res = +res;
-        //        res = Number(res);
-        //        res = parseInt(res);
-        //        console.log(res);
-        //        console.log(typeof res);
+         // var u = undefined;
+         // u = !!u;
+         // console.log(u);//false
+         // console.log(typeof u);//boolean
         
-        //    var u = undefined;
-        //    u = !!u;
-        ////    console.log(u);
-        //
-        //    var n = null;
-        //    n = !!n;
-        //    console.log(n);
+         // var n = null;
+         // n = !!n;
+         // console.log(n);//false
+         // console.log(typeof n);//boolean
         
-        //    2.Boolean类型和其他类型之间的显示转换   Boolean();
+             //2.Boolean类型和其他类型之间的显示转换   Boolean();
         
-                var a = undefined;
-                a = Boolean(a);
-                console.log(a);
+               var a = undefined;
+               a = Boolean(a);
+               console.log(a);
+               console.log(typeof a);
+               
         </script>
         

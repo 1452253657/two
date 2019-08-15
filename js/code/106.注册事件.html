@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+     <input type="button" id="btn" value="点一下">
+        <div id="main">1111111</div>
+    <script>
+       // 事件:什么时候做什么事情
+       //触发-响应
+       //1.获取按钮
+       var a = document.getElementById('btn');
+       //2.给按钮注册事件
+       //事件名称  click
+       //事件源：谁触发的事件
+       //事件处理函数：
+       btn.onclick = function(){
+           alert("多点几下");
+       }
+
+       //给div注册事件
+       var div = document.getElementById('main');
+       div.onclick = function(){
+    // 事件源  事件名称   处理函数
+        alert("我是div");
+       }
+      
+       
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #mv{
+            position: absolute;
+            left: 0;
+            transition: all 2s;
+
+        }
+    
+    
+    </style>
+</head>
+
+<body>
+    <input type="button" value="点一下" id="btn"><br>
+    <img src="../imgs/3.jpg" id="mv" alt="" width="800" height="400">
+    <div class="box"></div>
+    <script>
+        //1 获取元素
+        var btn = document.getElementById('btn');
+        var mv = document.getElementById('mv');
+        var box = document.querySelector('.box');
+        // box.innerHTML = '<strong>小明</strong>'
+        box.innerText = '<strong>小明</strong>'
+        //2 给按钮注册事件 
+            var a =1
+        btn.onclick = function(){
+             //3 切换图片
+             if(a ===1){
+                 mv.src ='../imgs/3.jpg'
+                 mv.style.transform = 'rotateY(180deg)'
+                // mv.style.height='500px'
+                 mv.style.left = '500px'
+                 a=2
+             }else if(a === 2){
+                 mv.src ='../imgs/4.jpg'
+                 mv.style.transform = 'scale(1)'
+               //  mv.style.width=' 800px'
+               //  mv.style.heigth=' 400px'
+                 mv.style.left = '0px'
+                 a=1;
+             }
+        }
+        
+            
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      //1 获取元素
+   //    var btn = document.getElementById("btn");
+   //    var mv = document.getElementById("mv");
+   //    //2 给按钮注册事件 
+   //    var flag = 1;//当flag的值是1的时候对应1.jpg当flag的值是2的时候对应2.jpg
+   //    btn.onclick = function () {
+   //        //3 切换图片
+   //        if (flag === 1) {
+   //            mv.src = '../imgs/1.png';
+   //            flag = 2
+   //        } else if (flag === 2) {
+   //            mv.src = '../imgs/2.jpg';
+   //            flag = 1;
+   //        }
+   //    }
+
+
+
+    </script>
+</body>
+
+</html>

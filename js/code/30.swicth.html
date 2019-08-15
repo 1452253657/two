@@ -16,6 +16,47 @@
 <script>
     //李四的年终工作评定，如果定为A级，则工资涨500元，如果定为B级，则工资涨200元，如果定为c级，工资不变，如果定为D级工资降200元，如果定为E级工资降500元。
     //设李四的原工资为5000，请用户输入李四的评级，然后显示李四来年的工资
+    var m = 5000;
+    var lv = prompt("请输入小明的等级");
+     var flag = true
+    switch (lv) {
+        case "A":
+            m += 500;
+            break;
+        case "B":
+            m += 200;
+            break;
+        case "C":
+            break;
+        case "D":
+            m -= 200;
+            break;
+        case "E":
+            m -= 500;
+            break;
+        default:
+            flag =false;
+            alert("1234154")
+            break;
+
+    }
+    if(flag ){
+        alert(m)
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     /*var qian = 5000;
     var lv = prompt("请输入小明的工作评级");
@@ -41,46 +82,46 @@
 */
 
     //switch case语法：
-//switch（判断的定值）{
-   //     case 值1:
-   //     执行语句;
-  //        break;
-   //     case 值2:
-   //     执行语句;
-   //     break;
-   //     case 值3:
-   //     执行语句;
-   //     break;
+    //switch（判断的定值）{
+    //     case 值1:
+    //     执行语句;
+    //        break;
+    //     case 值2:
+    //     执行语句;
+    //     break;
+    //     case 值3:
+    //     执行语句;
+    //     break;
     //    default:
     //    执行语句;
     //    break;
 
-    var qian = 5000;
-    var lv = prompt("请输入小明的工作评级");
-    var flag = true;
-    switch(lv){
-        case "A":
-            qian += 500;
-            break;
-        case "B":
-            qian += 200;
-            break;
-        case "C":
-            break;
-        case "D":
-            qian -= 200;
-            break;
-        case "E":
-            qian -= 500;
-            break;
-        default :
-        alert("请按套路出牌，你个SB");
-            flag = false;
-            break;
-    }
-    if(flag ==true){
-        alert(qian);
-    }
+   // var qian = 5000;
+   // var lv = prompt("请输入小明的工作评级");
+   // var flag = true;
+   // switch (lv) {
+   //     case "A":
+   //         qian += 500;
+   //         break;
+   //     case "B":
+   //         qian += 200;
+   //         break;
+   //     case "C":
+   //         break;
+   //     case "D":
+   //         qian -= 200;
+   //         break;
+   //     case "E":
+   //         qian -= 500;
+   //         break;
+   //     default:
+   //         alert("请按套路出牌，你个SB");
+   //         flag = false;
+   //         break;
+   // }
+   // if (flag == true) {
+   //     alert(qian);
+   // }
     //一般用来做定值的判断；
 
 

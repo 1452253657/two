@@ -15,95 +15,61 @@
 </html>
 <script>
 
-var arr = [2, 3, 4, 6, 1, 7, 10, 16, 13, 9, 17, ];
-var arr1 = [2, 33, 47, 68, 1, 7, 10, 16, 13, 9, 17, ];
-var arr2 = [2, 23, 54, 6, 1, 7, 10, 16, 13, 9, 17, ];
-//  console.log(arr);
- 
-function aaa(arg){ 
-    if(Object.prototype.toString.call(arg) !== '[object Array]'){
-        console.log('请传入一个数组');
-        return 
+    var arr = [2, 3, 4, 6, 1, 7, 10, 16, 13, 9, 17,];
+    var arr1 = [2, 33, 47, 68, 1, 7, 10, 16, 13, 9, 17,];
+    var arr2 = [2, 23, 54, 6, 1, 7, 10, 16, 13, 9, 17,];
+    console.log( Object.prototype.toString.call(arr));
+   
+    //  console.log(arr);
+  //function abc(arg) {
+  //    var arr = arg;
+  //    for (i = 0; i < arr.length; i++) {
+  //        for (k = 0; k < arr.length - 1 - i; k++) {
+  //            if(arr[k]>arr[k+1]){
+  //                var c =arr[k];
+  //                arr[k]=arr[k+1];
+  //                arr[k+1]=c;
+  //            }
+  //        }
+  //    }
+  //    return arr;
+  //}
+   console.log(arr2[5]);//访问数组
+
+
+     let ddd = {
+             a:1, //jianzhidui
+             b:'33',
+             c:[1,2,3,4],
+             d:{x:1,y:2},
+             e:function(){return 'xiezhian'}
+         } 
+         console.log(ddd["c"]);
+         
+         console.log(ddd.c);//访问对象
+         
+
+
+
+
+
+
+
+    //     for(let key in ddd){
+    //         console.log(key);
+    //         console.log(ddd[key]);
+
+    //     }
+    let data = [
+        { a: 0, b: 2 },
+        { a: 1, b: 2 },
+
+    ]
+    for (i = 0; i < data.length; i++) {
+        console.log(data[i])
+
+        //console.log(data);      
     }
-
-    let arr = arg 
-    
-    for(var i = 0,len = arr.length; i < len; i++){
-        for( var k = 0; k < arr.length -1 - i ; k++ ){
-                if(arr[k] >arr[k+1]){
-                    let a = arr[k]
-                    arr[k] = arr[k + 1]
-                    arr[k+1] = a
-                }
-            }
-    } 
-    
-    return arr
-}
-let a = aaa(arr) 
-console.log(a);
-
-let ddd = {
-        a:1, //jianzhidui
-        b:'33',
-        c:[1,2,3,4],
-        d:{x:1,y:2},
-        e:function(){return 'xiezhian'}
-    } 
-
-    for(let key in ddd){
-        console.log(key);
-        console.log(ddd[key]);
-        
-    }
-let data = [
-    {a:0,b:2},
-    {a:1,b:2},
-    {a:1,b:2},
-    {a:1,b:2},
-    {a:1,b:2},
-    {a:1,b:2},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-    {a:4,b:6},
-]
-
-for(var i = 0; i<data.length;i++){
-    console.log(data[i]);
-    
-}
 
 
 
@@ -121,7 +87,7 @@ for(var i = 0; i<data.length;i++){
     // for(let key in ddd){
     //     console.log(key);
     //     console.log(ddd[key]);
-        
+
     // }
 
 // [2, 3, 4, 1, 6, 7, 10, 13, 9, 16, 17]
@@ -139,9 +105,9 @@ for(var i = 0; i<data.length;i++){
 
 
 
-   
 
-    
+
+
 
 
 

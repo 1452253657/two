@@ -1,41 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
 
-    
-    
+
+
 </body>
+
 </html>
 
 <script>
-     var n = 3;
-     var m = 5;
+    var n = 3;
+    var m = 5;
 
     var num1 = n++ + n++ + ++m + n-- - m++;
- //参与运算：    3    4      6    5      6      
+    //参与运算：    3    4      6    5      6      
     //运算后：   4    5      6    4      7  
 
-console.log(num1);
-console.log(n);
-console.log(m);
-
-
-
-
-
+    console.log(num1);  //12
+    console.log(n);    //4
+    console.log(m);  //7
 
     var num2 = m++ - n++ + ++n + n++ + ++m + n++;
-     //参        7    4     6     6     9     7       31
-    //后         8    5      6    7     9     8       n  8   m  9
-    console.log(num2);     
-    console.log(n);
-    console.log(m);
+    //参        7    4     6     6     9     7       
+    //后         8    5      6    7     9     8       
+    console.log(num2);//31
+    console.log(n);//8
+    console.log(m);//9
 
 
 </script>

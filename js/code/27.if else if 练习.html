@@ -60,18 +60,27 @@
         }
        
     } */
-    var score = +prompt("请输入你的成绩");
-    if(score>=90){
-        console.log("A");
-    }else if(score>=80){
-        console.log("B")
-    }else if(score>=70){
-        console.log("C")
-    }else if(score>=60){
-        console.log("D")
-    }else{
-        console.log("E");
+    //成绩>=90：A
+    //90>成绩>=80：B
+    //80>成绩>=70：C
+    //70>成绩>=60：D
+    //成绩<60：E
+    var s  = +prompt("请输入你的成绩");
+    if(s>=90){
+        console.log('A');
+    }else if(s>=80){
+        console.log('B');
     }
+    else if(s>=70){
+        console.log('C'); 
+    }
+    else if(s>=60){
+        console.log('D');
+    }
+    else{
+        console.log('E');
+    }
+
 
 
 </script>

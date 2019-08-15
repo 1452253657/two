@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+
+</head>
+<body>
+
+     <!--    HTML转义符
+        1 "    &quot；
+        2  '     &apos；
+        3 &      &amp；
+        4 <       &1t；//less than小于
+        5 >      &gt；//greater than大于
+        6空格        &nbsp；
+        7 @            &copy； -->
+
+        &quot123&quot
+
+
+
+
+
+
+
+
+    <div id="box">
+        这是一个div
+        <span>这是一个span</span>
+    </div>
+
+    <script>
+    var box = document.getElementById('box')
+    console.dir(box);
+
+    // innerHTML获取内容的时候，如果内容中有标签，会把标签页获取到
+//原封不动把内容获取到
+    console.log(box.innerHTML);
+
+    //innerText获取内容的时候，如果内容中有标签，会把标签过滤掉
+//innerText会把前后的换行和空白都去掉
+    console.log(box.innerText);
+    
+    
+//     设置标签之间的内容
+// box.innerHTML=‘'；//清空内容
+// 通过innerHTML设置内容，如果内容中带标签，会以HTML的方式来解析
+// box.innerHTML=<b>黑马</b>程序猿’；
+// 通过innerText设置内容，如果内容中带标签，在网页上会把标签显示出来
+// box.innerText=<b|黑马</b>程序猿’；
+    
+    
+    
+    
+    
+    
+    </script>
+
+
+    
+</body>
+</html>

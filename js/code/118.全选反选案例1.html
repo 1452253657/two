@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute;
+            margin: 100px 500px;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 1px solid #c0c0c0;
+            width: 300px;
+        }
+
+        tbody,
+        td {
+            border: 1px solid #d0d0d0;
+            color: #404060;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #09c;
+            font: bold 16px "微软雅黑";
+            color: #fff;
+        }
+
+        td {
+            font: 14px "微软雅黑";
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        <input type="checkbox" id="j_cbAll">
+                    </th>
+                    <th>商品</th>
+                    <th>价钱</th>
+                </tr>
+            </thead>
+            <tbody id="j_tb">
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>iPhone8</td>
+                    <td>8000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>iPhone8</td>
+                    <td>8000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>iPhone8</td>
+                    <td>8000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>iPhone8</td>
+                    <td>8000</td>
+                </tr>
+            </tbody>
+        </table>
+        <input type="button" value="反选" id="btn">
+    </div>
+
+    <script>
+        var j_tb = document.getElementById('j_tb');
+        var inputs = j_tb.getElementsByTagName('input');
+        //1全选
+        //1.1 获取父checkbox，注册点击事件
+        var j_cbAll = document.getElementById('j_cbAll');
+        // console.log(j_cbAll);
+
+        j_cbAll.onclick = function () {
+            //1.2 找到所有子的checkbox，让这些checkbox的状态跟父checkbox保持一致
+
+            // console.log(inputs);
+
+            for (var i = 0; i < inputs.length; i++) {
+                var input = inputs[i];
+                // console.log(input);
+                if (input.type === 'checkbox') {
+                    input.checked = this.checked;
+                    //input.checked =true;
+                }
+            }
+        }
+        //2当点击子的checqkbox，如果所有的子的checkbox都被选中了，让父的checkbox也选中
+        //如果有一个子的checkbox没有被选中，父的checkbox也不被选中
+        for (var i = 0; i < inputs.length; i++) {
+            var input = inputs[i]
+            console.log(input);
+            //判断是否是checkbox
+            if (input.type !== 'checkbox') {
+                //结束当前循环，继续下一次循环
+                continue;
+            }
+            //给子的checkbox注册点击事件
+            input.onclick = function () {
+                checkAllCheckBox();
+            }
+            //判断父的checkbox的状态封装成函数
+            function checkAllCheckBox(){
+                //假设所有的子的checkbox都被选中了
+                var isAllChecked = true;
+                for (var i = 0; i < inputs.length; i++) {
+                    var input = inputs[i];
+                    console.log(input);
+                    
+                    if (input.type !== 'checkbox') {
+                        continue;
+                    }
+                    //判断当前的所有checkbox是否都被选中
+                    if (!input.checked) {
+                        isAllChecked = false;
+                        console.log( isAllChecked);
+                    }
+                }
+                //设置父的checkbox的状态
+                j_cbAll.checked =  isAllChecked;
+                console.log( j_cbAll.checked);
+            }
+        }
+
+      // 3.反选
+      // 3.1给反选按钮注册点击事件
+        var btn = document.getElementById('btn');
+        btn.onclick = function(){
+            // 3.2找到所有的子checkbox，让其反选
+            for(var i = 0; i< inputs.length;i++){
+                input = inputs[i];
+                if(input.type !=='checkbox'){
+                    continue;
+                }
+                input.checked = !input.checked;
+                //设置父的checkbox的状态
+                checkAllCheckBox()
+            }
+           
+        }
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

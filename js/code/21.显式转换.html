@@ -11,31 +11,34 @@
 </body>
 </html>
 <script>
-   // string显示转换成number的三种方法：
-//Number(); parseInt(); parseFloat();
+    // string显示转换成number的三种方法：
+    //Number(); parseInt(); parseFloat();
 
-        var a = "123";
-        console.log(Number(a));
-        console.log(parseInt(a));
-
-        var b = "123abc";
-        console.log(Number(b));
-        console.log(parseInt(b));
-        //使用parseInt做转换的时候，从第一位开始，如果是数字那么就直接转换，当遇到非数字的时候，直接丢弃。
-
-        var num ="123.456.abc";
-        console.log(Number(num));
-        console.log(parseInt(num));
-        console.log(parseFloat(num));
-
-        var u = undefined;
-        var n = null;
-        console.log(+u);
-        console.log(Number(u));
+      // var a = "123";
+      //console.log(Number(a));
+      //console.log(parseInt(a));
+      //console.log( Object.prototype.toString.call(a));
+      //console.log( Object.prototype.toString.call(Number(a)));
+      // console.log( Object.prototype.toString.call(parseInt(a)));
         
-        console.log(+n);
-        console.log(Number(n));
-       // nu11类型在转换为number类型的时候，使用显示转换的parseInt和parseFloat这个两个方法并不是适用。其会将nu11转成NaN
+     // var b = "123abc";
+     // console.log(Number(b) );//NaN
+     // console.log(parseInt(b) );//123
+      //使用parseInt做转换的时候，从第一位开始，如果是数字那么就直接转换，当遇到非数字的时候，直接丢弃。
+
+       // var num ="123.456.abc";
+       // console.log(Number(num));//NaN
+       // console.log(parseInt(num));//123
+       // console.log(parseFloat(num));//123.456
+
+      var u = undefined;
+      var n = null;
+      console.log(+u);
+      console.log(Number(u));
+      
+      console.log(+n);
+      console.log(Number(n));
+      // nu11类型在转换为number类型的时候，使用显示转换的parseInt和parseFloat这个两个方法并不是适用。其会将nu11转成NaN
 
 
 

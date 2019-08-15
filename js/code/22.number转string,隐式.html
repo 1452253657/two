@@ -1,49 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
 <script>
-// number类型转成string也有内神万式：
-//1.隐式转换
-   /* var  a = 2;
-    a = a+"";
-    console.log(a);
-    console.log(typeof a);
-
-    var num = 200;
-    num = num+"  ";
-    console.log(num);
-    console.log(typeof num);*/
-
-//2.显示转化（强制类型转换）
-   // 大部分对象都有两个方法： toString()   String();
-
-    var num1 =200;
-    num1 = num1.toString();
-    console.log(num1);
-    console.log(typeof num1);
     
-    var u = undefined;
-//        u = u.toString();//对于undefined使用toString()是不能转换成string类型。
-//        u = u+"";   //使用隐式转换能将undefined转成string类型
-//        u = String(u);
-//        console.log(u);
-//        console.log(typeof u);
+    //number类型转成string也有内神万式：
+    //1.隐式转换
+  //  var a = 2;
+  //  console.log(typeof a);
+  //  a = a+" ";
+  //  console.log(a);
+  //  console.log(typeof a);//string
+//
+  //  var num = 200;
+  //  console.log(typeof a);
+  //  num = num + " ";
+  //  console.log(num);
+  //  console.log(typeof num);
 
-var n = null;
-//        n = n + "";  //使用隐式转换可以将null类型转换成string类型。
-         //n = n.toString();//null类型转换成string类型不能使用toString();
-        n = String(n);
-        console.log(n);
-        console.log(typeof n);
+    //2.显示转化（强制类型转换）
+    //大部分对象都有两个方法： toString()   String()
+    //var n =200;
+    //// n = n.toString
+    //n  = String(n);
+    //console.log(n);
+    //console.log(typeof n);
+    
+    // var u = undefined;
+    //         u = toString(u);//对于undefined使用 变量.toString() 是不能转换成string类型。
+    //         console.log(typeof u);
+    //         u = u+"";   //使用隐式转换能将undefined转成string类型
+    //         console.log(typeof u);
+    //         u = String(u);
+    //         console.log(u);
+    //         console.log(typeof u);
+
+            var n = null;
+             n =  n+"";       //使用隐式转换可以将null类型转换成string类型。
+             console.log(typeof n);
+             
+            //n = n.toString();//null类型转换成string类型不能使用toString();
+             n = String(n);
+            console.log(n);
+            console.log(typeof n);
 
 //      注意：几乎所有的对象都有toString()这个方法。
 //      但是对于undefined和null这个两个对象是没有toString()这个方法。
@@ -53,4 +63,3 @@ var n = null;
 
 
 </script>
-

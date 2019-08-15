@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="s">
+        <div name="main"></div>
+        <div></div>
+        <div class="a"></div>
+        <p class="a"></p>
+        <span class="a"></span>
+
+    </div>
+
+    <script>
+
+        //根据标签的name属性获取元素
+        //document.getElementsByName（）
+        //var divs = document.getElementsByName（'main'）；console.log（divs）；根据标签的class属性获取元素
+        //浏览器兼容性IE9以后才支持的
+        //document.getElementsByC1assName（）；
+
+        // query: 查询
+        // Selector: 选择器
+        //根据选择器类型来找查找
+        //querySelector
+        //返回文档中匹配指定的选择器组的第一个元素（使用深度优先先遍历文档的节点|并且通过文档标记中的第一个元素，并按照子节点数量的顺序迭代顺序节点）。
+        var s = document.querySelector('#s');//id选择器需要加#号
+        console.log(s);
+        var a = document.querySelector('.a');//类名选择器要加 . 
+        console.log(a);
+        var elements = document.querySelectorAll('.a');
+        console.log(elements);
+
+
+     // 都是根据选择器来获取元素
+     // 浏览器兼容性问题IE8以后才执行
+     // 只会返回第一个匹配到的元素
+     // querySelector（）
+     // 返回所有匹配到的元素
+     // querySelecyorAl1（）
+     //移动端可以使用，pc端要考虑兼容性问题
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

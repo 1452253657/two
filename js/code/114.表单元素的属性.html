@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="按钮" id="btn">
+    <input type="button" value="设置文本框的值" id="btn1">
+
+    <br>
+    <input type="text" id="txt" value="123" >
+
+    <script>
+    var btn = document.getElementById('btn')
+    var txt = document.getElementById('txt')
+        
+        btn.onclick =function(){
+            var txt = document.getElementById('txt');
+            console.log(txt.value);
+            console.log(txt.type);
+            //当htm1中的标签的属性，只有一个值的时候
+            //DOM中对应的元素的属性值是布尔类型
+            console.log(txt.disabled);
+            txt.disabled =true;
+        }
+        var btn1 = document.getElementById('btn1');
+        btn1.onclick = function(){
+            var txt = document.getElementById('txt');
+            txt.value ='12456';
+        }
+    
+    
+    
+    </script>
+
+
+    
+</body>
+</html>
