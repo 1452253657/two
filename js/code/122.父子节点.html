@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+        <div id="box">
+        <span>span</span>
+        <p>p标签</p>
+        <!-- 注释 -->
+    </div>
+     
+    
+    <script>
+        var box = document.getElementById('box');
+        console.dir(box);
+        
+    //节点的层次结构
+
+ // //父子结构
+ // //parentNode  父节点 只有一个
+ // //childNodes  子节点 有很多个
+ // //children      子元素
+
+ // var box = document.getElementById('box');
+ //     console.log(box.parentNode);
+ //     
+
+ // console.log(box.childNodes);
+ // 
+ // //属性节点、元素节点、文本节点、注释节点
+ // //找到所有的子节点
+ // for(var i = 0; i< box.childNodes.length;i++){
+ //    var node = box.childNodes[i];
+ //    if(node.nodeType ===1){
+ //        console.log(node);
+ //        
+ //    }
+ // }
+        //直接获取子元素
+        var box = document.getElementById('box');
+        console.log(box.children);
+        
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+
+
+</body>
+</html>

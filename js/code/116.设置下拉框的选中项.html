@@ -27,14 +27,18 @@
             // 2获取到下拉框中所有的option
             var a = document.getElementById('a');
             console.dir(a);
-            var options = a.getElementByTagName('option')
+            var options = a.getElementsByTagName('option');
             console.log(options);
             
             // 3随机生成索引
             var randomIndex = parseInt(Math.random() * options.length);
+            console.log(randomIndex);
+            
             // 4根据索引获取option，并让option选中
             var option = options[randomIndex];
-            option.selected = turn;
+            console.log(option);
+            
+            option.selected = true;
         }
 
 

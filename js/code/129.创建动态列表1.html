@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="按钮" id="btn">
+    <div id="box"></div>
+
+    <script src="../js文件/common.js"></script>
+    <script>
+        var datas = ['1','2','3','4','5','6','7'];
+        //点击按钮  动态创建列表   鼠标放上高亮显示
+        my$('btn').onclick = function () {
+            var ul = document.getElementById('ul')
+            //把ul放到页面上来  把u1放到DOM树上，并且会重新绘制
+            my$('box').appendChild(ul);
+            for (var i = 0; i < datas.length; i++) {
+                var data = datas[i]
+                //在内存中动态创建1i
+                var li = document.createElement('li')
+                //把1i添加到DOM树，并且会重新绘制
+                ul.appendChild(li);
+                //设置1i中显示的内容
+                li.innerText = data;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

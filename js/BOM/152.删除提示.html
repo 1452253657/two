@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+     body {
+      margin: 0;
+      padding: 0;
+    }
+    #box {
+      width: 150px;
+      height: 30px;
+      background-color: lightgray;
+      opacity: 0.5;
+      margin:200px auto;
+      padding-top: 5px;
+      text-align: center;
+      color: red;
+      display: none;
+    }
+    </style>
+
+    <script>
+        onload =function(){
+            //当页面的所有元素创建完成，等待外部文件下载完毕才会执行
+            var btn = document.getElementById('btn')
+        btn.onclick = function(){
+
+
+                var box = document.getElementById('box')
+                box.style.display = 'block';
+                setTimeout(function(){
+                    box.style.display = 'none';
+                },2000) 
+        }
+        }
+    
+    </script>
+</head>
+<body>
+    <input type="button" value="删除" id="btn">
+    <div id="box"> 删除成功</div>
+        <script>
+        //当页面的所有元素创建完成 执行，不需要等待外部文件下载完毕 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </script>
+
+    
+</body>
+</html>

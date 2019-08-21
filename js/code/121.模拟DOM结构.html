@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">12346</div>
+    <p id="111"> </p>
+
+    <script>
+    // 文档树
+    //     节点
+    //         元素节点
+    //         属性节点
+    //         文本节点
+    //         注释节点
+    var box = document.getElementById('box')
+    console.dir(box);
+    
+
+
+
+
+
+    
+    //获取对象没有的属性，属性的值是undefined
+  // function Node(options){
+  //     this.clsaaName = options.clsaaName;
+  // }
+  // var o = new Node ({
+  //     //clsaaName:'cls'
+  // })
+  // console.log(o);
+    
+            //节点
+    function Node(options){
+    //   if(options.className){
+    //       this.className = options.className;
+    //   }else {
+    //       this.className ='';
+    //   }
+
+            // this.className =options.className?options.className:'' ;
+
+           this.className =options.className ||'';
+            //||布尔类型的运筑符，如果有一边是true就返回true，如果两边同时为false返回false
+            //||两边也可以是其它类型，会先转换成布尔类型
+            //如果第一个运筑数转换成布尔类型，是true，直接返回这个运算数
+            //如果第一个运算数转换成布尔类型，是false，返回第二个运算数
+            this.id = options.id ||'';
+
+            this.nodeName = options.nodeName || '';
+
+            this.nodeType = options.nodeType || '';
+            this.nodevalue = options.nodevalue || null;
+
+
+                this.children = options.children || [];
+    }
+ //  var o = new Node ({
+ //      //clsaaName:'cls'
+ //  })
+ //  console.log(o);
+ //  
+
+
+            //创建html节点
+            var html = new Node({
+                nodeName :'html'
+            });
+            console.dir(html);
+
+            //创建head节点
+            var head = new Node({
+                nodeName:'head'
+            });
+           // 设置html中的子节点head
+            html.children.push(head);
+            //console.dir(html);
+
+            var body = new Node({
+                nodeName:'body'
+            });
+            //设置html中的子节点body
+            html.children.push(body);
+
+            //div
+            var div =new Node({
+                nodeName:'div'
+            })
+            //p
+            var p =  new Node({
+                nodeName:'p'
+            }) ;
+
+            body.children.push(div);
+            body.children.push(p);
+
+            console.dir(html)
+
+                // nodeType 节点的类型
+                // 1元素节点
+                // 2属性节点
+                // 3文本节点
+                // nodeName节点的名称（标签名称）
+                // nodeValue节点值
+                // 元素节点的nodeValue始终是null
+
+
+    
+    
+    </script>
+
+
+
+
+</body>
+</html>

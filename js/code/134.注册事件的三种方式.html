@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="按钮" id="btn">
+
+
+
+    <script>
+        var btn = document.getElementById('btn')
+        //  方式一  无法给同一个对象的同一个事件注册多个事件处理函数
+      // btn.onclick = function () {
+      //     alert('一二三四五，上山打老虎')
+      // }
+      // //方式二   浏览器兼容问题  IE9以后才执行
+        btn.addEventListener('click', function () {
+            alert('一二三四五，上山打老虎')
+        })
+        btn.addEventListener('click', function () {
+            alert('一二三四五六七，葫芦娃成串救爷爷')
+            })
+      // //方式三  // Ie9后不支持
+      //btn.attachEvent('onclick', function () {
+      //     alert('一二三四五，上山打老虎')
+      // })
+      // btn.attachEvent('onclick', function () {
+      //     alert('一二三四五六七，葫芦娃成串救爷爷')
+      // })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

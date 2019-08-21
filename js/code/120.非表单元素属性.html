@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a id="link" href="http://www.baidu.com" title="这是百度">百度</a>
+    <img src="../imgs/3.jpg" id="tp" alt="图片">
+
+
+    <script>
+    var link =document.getElementById('link');
+    var tp  = document.getElementById('tp');
+
+    //获取dom对象的属性
+    console.log(link.id);
+    console.log(link.href);
+    console.log(link.title);
+
+    console.log(tp.id);
+    console.log(tp.src);
+    console.log(tp.alt);
+    
+    //设置dom对象的属性
+    link.href = 'http://www.google.com';
+    link.title = 'google';
+    
+    
+    
+    
+    
+    
+    
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="box">
+    </div>
+
+    <span id='btn'>点击</span>
+    <!-- <script src="../js文件/common.js"></script> -->
+    <script>
+        var datas = [
+            { name: 'xio', subject: '语文1', score: '88' },
+            { name: 'xio', subject: '语文2', score: '88' },
+            { name: 'xio', subject: '语文3', score: '88' },
+            { name: 'xio', subject: '语文4', score: '88' },
+            { name: 'xio', subject: '语文5', score: '88' },
+            { name: 'xio', subject: '语文6', score: '88' },
+        ]
+        //表头数据
+        var headDatas = ['姓名', '科目', '成绩', '操作']
+
+        var box = document.getElementById('box')
+        var btn = document.getElementById('btn')
+        //1创建table元素
+        var table = bb('table') //..document.createElement('table')
+        table.border = '1px'
+        var thead = bb('create', 'thead')
+        var tr = crt('tr')
+
+        function bb(dom) {
+            return document.createElement(dom)
+        }
+
+
+
+
+        box.appendChild(table)
+        table.appendChild(thead)
+        thead.appendChild(tr)
+
+        function crt(str) {
+            return document.createElement(str)
+        }
+
+        for (var i = 0; i < headDatas.length; i++) {
+            var th = document.createElement('th')
+            tr.appendChild(th)
+            th.innerHTML = headDatas[i];
+        }
+
+        var tbody = document.createElement('tbody')
+        table.appendChild(tbody)
+
+
+
+        function addContent() {
+            for (var i = 0; i < datas.length; i++) {
+                var tr = document.createElement('tr')
+                tbody.appendChild(tr)
+                for (var prop in datas[i]) {//循环对象
+                    var td = document.createElement('td')
+                    tr.appendChild(td)
+                    td.innerHTML = datas[i][prop]
+                }
+
+                var td = document.createElement('td')
+                tr.appendChild(td)
+                td.innerHTML = `<span  class="del" value='${i}'>删除${i}</span>`
+            }
+        }
+
+        addContent()
+        // 2创建表头
+        var dels = document.querySelectorAll('.del');
+        box.onclick = function (event) {
+            var value = +event.target.innerHTML.slice(-1)
+            console.log(value);
+            datas.splice(value, 1)
+            tbody.innerHTML = null
+
+            addContent()
+        }
+
+        var tr = crt('tr')
+        function crt(str) {
+            return document.createElement(str)
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        var obj = {
+            arr: [1, 2, 3],
+            arr1: [2, 4, 5]
+        }
+        var arr = [1, 2, 3]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function a(arg, type) {
+            if (type === 'ddd') {
+                return arg.arr1
+            } else if (type === '数组') {
+                return arg
+            }
+        }
+        var bb = a(obj, 'ddd')
+        var cc = a(arr, '数组')
+        console.log(bb);  //[2,4,5]
+        console.log(cc);  //3
+
+
+       // 3创建数据行
+
+
+    </script>
+
+</body>
+
+</html>

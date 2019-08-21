@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" id="btn" value="按钮">
+    <div id="box"></div>
+
+    <script>
+        // var datas = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        // var btn = document.getElementById('btn')
+        // btn.onclick = function () {
+        //     var box = document.getElementById('box')
+        //     //    box.innerHTML = '葫芦娃 <P>救爷爷</p>';
+        //     box.innerHTML = '<ul>';//效率问题
+
+        //     //遍历数组
+        //     for (var i = 0; i < datas.length; i++) {
+        //         var data = datas[i]
+        //         box.innerHTML += '<li>' + data + '</li>'
+        //     }
+
+
+        //     // box.innerHTML =    box.innerHTML+'<ul>';
+        //     box.innerHTML += '</ul>'
+        // }
+
+        //优化1
+        // var datas = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        // var btn = document.getElementById('btn')
+        // btn.onclick = function () {
+        //     var box = document.getElementById('box')
+        //     var html= '<ul>'; //重新开辟内存需要耗费时间
+
+        //     //遍历数组
+        //     for (var i = 0; i < datas.length; i++) {
+        //         var data = datas[i]
+        //       html += '<li>' + data + '</li>' //因为字符串不可变重新开辟内存需要耗费时间间
+        //     }
+        //     html += '</ul>'
+        //     box.innerHTML =html;
+        // }
+
+        //优化2
+        var datas = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        var btn = document.getElementById('btn')
+        btn.onclick = function () {
+            var box = document.getElementById('box')
+            //使用数组代替字符串拼接
+            var array = [];
+            array.push('<ul>')
+
+            //遍历数组
+            for (var i = 0; i < datas.length; i++) {
+                var data = datas[i]
+                array.push('<li>' + data + '</li>')
+            }
+            array.push('</ul>')
+            box.innerHTML = array.join('');
+
+            //当1i生成到页面之后，再从页面上查找1i注册事件
+            
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

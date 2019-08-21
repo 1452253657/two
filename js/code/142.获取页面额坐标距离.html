@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body{
+        height: 1000px;
+    }
+    
+    
+    
+    </style>
+</head>
+<body>
+
+    <script>
+    //   e.clientX/e.clientY   鼠标在可视区域中的位置
+    //   e.pagex/e.pageY       鼠标在页面中的位置有兼容性问题从IE9以后才支持
+    //   pageY=clientY+页面滚动出去的距离
+        
+    document.onclick =function(){
+        //输出页面滚动出去的距离
+        console.log(document.body.scrollLeft);
+        console.log(document.body.scrollTop);
+
+        //documentElement 文档的根元素   htm1标签
+        console.log(document.documentElement);
+        //有些浏览器是使用这两个属性来获取的
+        console.log(document.documentElement.scrollLeft);
+        console.log(document.documentElement.scrollTop);  
+    }
+        //获取页面滚动距离的浏览器兼容问题
+        function getScroll(){
+            var  scrollLeft = document.body.scrollLeft || document.documentElement.scrollLeft;
+            var  scrollTop = document.body.scrollTop || document.documentElement.scrollTop ;
+            return{
+                scrollLeft :scrollLeft,
+                scrollTop :scrollTop
+            }
+        }
+
+        
+        
+        
+        
+        
+        
+        
+        
+        </script>
+    
+</body>
+</html>

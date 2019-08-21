@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        select {
+            width: 200px;
+            height: 200px;
+            background-color: #33cccc;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <select id="all" multiple="multiple">
+        <option>苹果</option>
+        <option>橘子</option>
+        <option>梨</option>
+        <option>西瓜</option>
+        <option>水蜜桃</option>
+    </select>
+
+    <input type="button" value=">>" id="btn1">
+    <input type="button" value="<<" id="btn2">
+    <input type="button" value=">" id="btn3">
+    <input type="button" value="<" id="btn4">
+
+    <select id="select" multiple="multiple">
+
+    </select>
+
+    <script src="../js文件/common.js"></script>
+
+    <script>
+        var all = document.getElementById('all')
+        var select = document.getElementById('select')
+        var btn1 = document.getElementById('btn1')
+        var btn2 = document.getElementById('btn2')
+        var btn3 = document.getElementById('btn3')
+        var btn4 = document.getElementById('btn4')
+        var len = all.children.length;
+        //1选择全部将 'all '移动到 'select' 
+        btn1.onclick = function () {
+            for (var i = 0; i < len; i++) {
+                var option = all.children[0];
+                select.appendChild(option);
+            }
+        }
+        //2选择全部将 'select' 移动到  'all'
+        btn2.onclick = function () {
+            for (var i = 0; i < len; i++) {
+                var option = select.children[0];
+                all.appendChild(option);
+            }
+        }
+        //选择任意的子元素 移动到 'select' 
+
+        
+
+
+         btn3.onclick = function () {
+            //找到选中option
+            var arr = []//存储选中的option
+            for (var i = 0; i < all.children.length; i++) {
+                var option = all.children[i]
+                if (option.selected) {
+                    arr.push(option)
+                    //去掉当前option的选中效果
+                    option.selected = false;
+                }
+            }
+            //把数组中的option移动到第二个select中 
+            for (var i = 0; i < arr.length; i++) {
+                var option = arr[i]
+                select.appendChild(option);
+            }
+        }
+              
+        btn4.onclick = function () {
+            //找到选中option
+            var arr1 = []   //存储选中的option
+            console.log(arr1);
+            
+          for (var i = 0; i < select.children.length; i++) {
+              var option = select.children[i]
+              if (option.selected) {
+                  arr1.push(option)
+                  //去掉当前option的选中效果
+                  option.selected = false;
+              }
+          }
+            //把数组中的option移动回到all中 
+            for (var i = 0; i < arr1.length; i++) {
+                var option = arr1[i]
+                all.appendChild(option);
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

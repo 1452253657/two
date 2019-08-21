@@ -1,47 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
-    <input type="text" class="gray" value="请输入搜索关键字" id="a"> 
+    <input type="text" class="gray" value="请输入搜索关键字" id="a">
     <input type="button" value="搜索" id="b">
 
     <script>
         //当文本框获得焦点，如果文本框里的内容是请输入搜索关键字清空文本框，并且让字体变为黑色
-    var a = document.getElementById('a');
-    a.onfocus = function(){
-        //获取焦点的事件 focus
-         if(this.value === '请输入关键字'){
-             this.value = '';
-             this.className ='black';
-         }
-    }
-    //当文本框失去焦点，如果文本框里的内容为空还原文本框里的文字，并且让字体变为灰色
-    //失去焦点的事件blur
-    a.onblur = function(){
-        //判断文本框中的内容为空
-        if(this.value.length ===0 || this,value === '请输入关键字'){
-            this.value ='请输入关键字';
-            this.className ='gray';
-        } 
+        var a = document.getElementById('a');
+        a.onfocus = function () {
+            //获取焦点的事件 focus
+            if (this.value === '请输入关键字') {
+                this.value = '';
+                this.className = 'black';
+            }
+        }
+        //当文本框失去焦点，如果文本框里的内容为空还原文本框里的文字，并且让字体变为灰色
+        //失去焦点的事件blur
+        a.onblur = function () {
+            //判断文本框中的内容为空
+            if (this.value.length === 0 || this, value = '请输入关键字') {
+                this.value = '请输入关键字';
+                this.className = 'gray';
+            }
+        }
 
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
     </script>
 </body>
+
 </html>

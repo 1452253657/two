@@ -34,14 +34,14 @@
         btn.onclick = function(){
             var box = document.getElementById('box');
             //为什么DOM对象的对应的标签的class属性的名字叫做c1assName，
-         //  应为class在js中是关键字关键字不可以作为变量或者属性的名字
+         //  因为class在js中是关键字,关键字不可以作为变量或者属性的名字
             if(flag){
                 box.className = 'hidden'
-                this.value ='显示';//this找到事件源
+               // this.value ='显示';//this找到事件源
                 flag =false;
             }else {
                 box.className ='show'
-                this.value ='隐藏'
+               // this.value ='隐藏'
                 flag =true;
             }
             //设置按钮对应的元素
@@ -52,9 +52,10 @@
 
 
 //this的几种情况
-            //1普通函数中的this->window
-            //2构造函数中的this->是当前构造函数创建的对象
-            //3方法中的this->方法所属的对象
+            //1普通函数中的this   ->   window
+            //2构造函数中的this  ->    是当前构造函数创建的对象
+            //3方法中的this      ->  方法所属的对象
+           // 4事件处理函数中的this  -> 事件源，谁调用的该事件this就指向谁
     </script>
 </body>
 

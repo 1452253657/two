@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- location对象
+location对象是window对象下的一个属性，使用的时候可以省略window对象
+location可以获取或者设置浏览器地址栏的URL -->
+
+            <input type="button" id="btn" value="点击">
+            <script>
+            var btn = document.getElementById('btn')
+            btn.onclick =function(){
+               // console.log(location.href);
+               // location.href = 'http://www.baidu.com'
+
+               //assign 委派
+               //assign()  的作用和href的作用一样。可以让页面跳转到指定的地方
+                //  location.assign('http://www.baidu.com')
+
+                //替换掉地址栏中的地址，但是不记录历史
+                 //location.replace('http://www.baidu.com')
+
+
+
+               // 重新加载 refresh fs
+               // 参数     true强制从服务器获取页面                   false如果浏览器有缓存的话，直接从缓存获取页面
+                 location.reload(true);
+               // f5刷新页面，可能从缓存中加载                     control+f5强制刷新从服务器获取页面
+
+            }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            </script>
+
+
+
+
+</body>
+
+</html>

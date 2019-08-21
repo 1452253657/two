@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box"></div>
+
+    <script>
+    //在内存中创建一个DOM对象
+        var p = document.createElement('p')
+        //设置对象的属性
+        p.innerHTML = 'hi'
+        p.style.color ='red'
+       // console.log(p);
+       // console.dir(p)
+
+        //把p元素，放到DOM树上
+        var box = document.getElementById('box')
+        box.appendChild(p)
+
+        
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+    
+</body>
+</html>

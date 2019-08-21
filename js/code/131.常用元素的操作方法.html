@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" id="btn" value="点击">
+    <ul id="ul">
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+        <li>444</li>
+    </ul>
+    <ul id="sss">
+
+    </ul>
+
+    <script>
+    var btn  =document.getElementById('btn')
+        btn.onclick = function(){
+            // var li = document.createElement('li') 
+            // li.innerText = 'abc'//拿到后先赋值
+              var ul = document.getElementById('ul')
+              //insertBefore()
+          //  ul.insertBefore(li,ul.children[0])//插入一个新元素到某个子元素之前
+          //  var div = document.createElement('div')
+          //  div.innerText = 'hoell worad'
+            //replaceChild()
+           // ul.replaceChild(div,ul.children[0])//将新元素代替某个子元素
+            var sss = document.getElementById('sss')
+            sss.appendChild(ul.children[0])//如果被插入的节点已经存在于当前文档的文档树中，则那个节点会先从原先的位移除，然后再插入到新的位。
+
+        }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+
+</body>
+</html>
