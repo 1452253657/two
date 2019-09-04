@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function fn1(){
+        //     var a = 10
+        //     console.log(a);
+        //     
+        //     fn2()
+        // }
+        // function fn2(){
+        //     var b = 20
+        //     console.log(b);
+        //     
+        // }
+        // fn1()
+
+        //递归：医数自己调用自己
+        //在递归的过程中会出错
+        //Maximum call stack size exceeded
+        //内存溢出：超过了最大的维栈大小
+
+        //递归，一般都要写一个结束的条件
+        //  function fn(){
+        //      var a = 10
+        //      console.log(a);
+        //      
+        //      fn()
+        //  }
+        //  fn()
+
+
+
+        //   用递归实现 1+2+3+.....+n
+
+        
+       //n=3,3+getsum(3-1)->2+1
+       //n=2,2+getsum(2-1)->1
+       //n=1,1
+        function getSum(a) {
+            //递归结束的条件
+            if (a === 1) {
+                return 1;
+            }
+            return a + getSum(a - 1)
+        }
+        console.log(getSum(3));
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var name1 = document.getElementById('name1')
+        var age1 = document.getElementById('age1')
+        var btn1 = document.getElementById('btn1')
+        var btn2 = document.getElementById('btn2')
+        var idvalue = document.getElementById('idvalue')
+        var btn3 = document.getElementById('btn3')
+        var f = function (f) {
+            var xhr = new XMLHttpRequest()
+            // GET POST
+            xhr.open('GET', 'http://192.168.1.105:3000/queryAll', true)//查询
+            xhr.send()
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && status === 200) {
+                    console.log(xhr.response);
+                }
+            }
+        }
+        btn2.onclick = function () {
+            f()
+        }
+
+        btn1.onclick = function () {
+            var xhr = new XMLHttpRequest()
+            xhr.open('GET', 'http://192.168.1.105:3000/addUser?name=' + name1.value + '&age=' + age1.value, true)
+            xhr.send()
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && status === 200) {
+                    console.log(xhr.response);
+                }
+            }
+        }
+
+        btn3.onclick = function () {
+            var xhr = new XMLHttpRequest()
+            xhr.open('POST', 'http://192.168.1.105:3000/updateUser', true)
+            let obj = {
+                id: 12,
+                name: '小红',
+                age: 15,
+            }
+            var formData = []
+            for (var key in obj) {
+                formData.push(''.concat(key, '=', obj[key]))
+            }
+            obj = formData.join('&')
+            xhr.responseType = 'json'
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+            xhr.send(`id=${idvalue.value}&name=${name1.value}&age=${age1.value}`)
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && status === 200) {
+                    console.log(xhr.response);
+                }
+            }
+        }
+
+        btn4.onclick = function () {
+            var xhr = new XMLHttpRequest()
+            xhr.open('GET', 'http://192.168.1.105:3000/deleteUser?id=' + idvalue.value, true)
+            xhr.send()
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && status === 200) {
+                    console.log(xhr.response);
+                }
+            }
+        }
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+    <input type="text" id="name1">
+    <input type="text" id="age1">
+    <button id="btn1">
+        新赠
+    </button>
+    <button id="btn2">
+        查询
+    </button>
+    <button id="btn3">
+        修改
+    </button>
+    <button id="btn4">
+        删除
+    </button>
+    <input type="text" id="idvalue"><br>
+    
+    <div id="box">
+    </div>
+    <span id="btn">
+        点击删除
+    </span>
+
+
+
+</body>
+
+</html>

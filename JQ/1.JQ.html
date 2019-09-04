@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+      // window.onload=function(){
+      //     //获取div根据id方式来获取
+      //     document.getElementById('btn').onclick=function(){
+      //         var  box = document.getElementById('box')
+      //         box.style.width='200px'
+      //         box.style.height='100px'
+      //         box.style.backgroundColor='red'
+      //     }
+      // }
+
+    </script>
+    <script src="../JQ/jquery-1.12.2.js"></script>
+    <script>
+        //页面加载后的一个事件
+        $(function () {
+            $('#btn').click(function () {
+                $('#box').css({ 'width': '200px', 'height': '100px', 'backgroundColor': 'green' })
+            })
+        })
+
+
+    </script>
+
+</head>
+
+<body>
+    <input type="button" value="点击" id="btn">
+    <div id="box"></div>
+
+</body>
+
+</html>

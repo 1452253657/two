@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="../JQ/jquery-1.12.2.js"></script>
+    <script>
+  //      window.onload = function () {
+            //btn 就是DOM对象
+       //    var btn = document.getElementById('btn')
+       //    //btn.onclick =function(){
+       //    //    this.style.backgroundColor ='red' }
+       //    //DOM对象转JQuery对象，
+       //    //只需要把 DOM对象放在$（dom对象）-->jQuery对象
+       //    $(btn).click(function () {
+       //        $(this).css('backgroundColor', 'red')
+       //    })
+
+        //把jQuery对象转知DOM对象两种方式：
+        //1.$(btn).get(0)  --->  DOM对象
+   //     //2.$(btn)[0];     --->   DOM对象
+   //       var btn =document.getElementById('btn')
+   //       var obj= $(btn).get(0) //DOM对象
+   //       obj.onclick= function(){
+   //           this.style.backgroundColor='red'
+   //       }
+   //     }
+
+
+    </script>
+    <script>
+        $(function () {
+            //$('#btn') ---->JQuery对象
+            // $('#btn').click(function(){
+            //     $(this).css('backgroundColor','blue')
+            // })
+
+            //  $('#btn').onclick =function(){
+            //      this.style.backgroundColor='red'
+            //  }//该代码无法运行
+
+            //get[0]
+            $('#btn').get(0).onclick = function () {
+                this.style.backgroundColor = 'red'
+            }
+        })
+     //   DoM对象和jQuery对象可以互转
+     //   DoM对象转         ----> jQuery对象：
+     //   $（Dom的对象）    -----> jQuery对象
+
+     //   jQuery对象       ---> DOM对象：
+     //   1.
+     //   $("#btn")        ---> DoM对象
+     //   2.
+     //   $("#btn").get(0) ---> Dom对象
+
+
+
+       
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+    <input type="button" value="点击" id="btn">
+
+
+</body>
+
+</html>

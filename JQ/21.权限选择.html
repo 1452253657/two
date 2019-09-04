@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div{
+        width: 200px;
+        height: 100px;
+        background-color: skyblue;
+        margin-top:20px;
+    }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+    $(function(){
+        $('#btn').click(function(){
+            //点击按钮把第一个div中的元素添加到第二个div中
+           // $('#box2').append( $('#box1>p'))
+           var p =$("<p></p>")
+            p.text('这里有个很古老的故事')
+            p.appendTo($('#box2'))
+        })  
+    })
+    
+    
+    
+    
+    </script>
+</head>
+<body>
+    <input type="button" id="btn" value="显示效果">
+    <div id="box1">
+        <p>这里有个很古老的故事</p>
+    </div>
+    <div id="box2"></div>
+    
+</body>
+</html>

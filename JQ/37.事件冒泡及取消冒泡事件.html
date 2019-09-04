@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box1{
+            width: 500px;
+            height: 500px;
+            background-color:skyblue;
+        }
+        #box2{
+            width: 350px;
+            height: 350px;
+            background-color:rgb(180, 235, 135);
+        }
+        #box3{
+            width: 200px;
+            height: 200px;
+            background-color:rgb(207, 135, 235);
+        }
+         
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function(){
+            //事件冒泡：元素中有元素，这些元素都有相同的事件，一旦最里面的元素的事件触发了，外面的所有的元素的相同的事件都会被触发
+            //元素A中有一个元素B，A和品都有点击事件，B点击事件触发，A点击事件自动触发
+            $('#box1').click(function(){
+                alert('一娃'+$(this).attr('id'))
+            })
+            $('#box2').click(function(){
+                alert('二娃'+$(this).attr('id'))
+            })
+            $('#box3').click(function(){
+                alert('三娃'+$(this).attr('id'))
+                return false //取消事件冒泡 
+            })
+            $('#box4').click(function(){
+                alert('超链接被点了')
+                 return false //以及可以取消超链接的点击默认事件
+        })
+        })
+
+        </script>
+</head>
+<body>
+    <div id="box1">
+        <div id="box2">
+            <div id="box3">
+                
+            </div>
+        </div>
+    </div>
+    <div id="box4">
+            <a href="http://www.baidu.com">百度</a>
+    </div>
+    
+</body>
+</html>

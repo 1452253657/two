@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var ming = {
+            name: '小明',
+            cars: ['2132', '12313'],
+            houses: ['sjdlf', 'djflk'],
+            play: function () {
+                console.log('小明你别跑');
+
+            }
+        }
+
+        var gang = {
+            name: '小刚'
+        }
+    // //复制对象的成员给另一个对象
+    //   for (var key in ming) {
+    //       //不给小刚复制同名的属性
+    //       if (gang[key]) {
+    //           continue;
+    //       }
+    //       gang[key] = ming[key]
+    //   }
+    //   console.dir(gang);
+
+        //extend 拓展
+    function extend(parent,child){
+        for( var key in parent){
+            if(child[key]){
+                continue;
+            }
+            child[key]=parent[key]
+        }
+    }
+    extend(ming,gang)
+    console.dir(gang);
+    
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

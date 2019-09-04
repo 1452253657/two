@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            background-color: skyblue;
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            //为div中的按钮绑定事件，获取事件对象中内容
+            $('#box').on('click', 'input', function () {
+                //获取函数 在调用的时候，有几个参数
+                //console.log(arguments.length[0]);
+                console.log(event);
+               // event.delegateTarget --------->div
+               // event.currentTarget------> input
+               // event.target ----------> input
+        })
+        })
+
+    </script>
+</head>
+
+<body>
+
+    <div id="box">
+        <input type="button" id="btn" value="点击">
+    </div>
+</body>
+
+</html>

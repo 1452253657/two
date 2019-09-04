@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    div{
+        width: 200px;
+        height: 100px;
+        background-color: skyblue;
+    }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function(){
+            $('#btn1').click(function(){
+                $('#box').hide(1000); //隐藏
+                //hide方法中可以写参数：参数类型：1.数字类型，2字符类型
+                //1教字类型：10ee表示的是毫秒—-1秒
+                //2字符类型："slow""normal""fast"
+            })
+            $('#btn2').click(function(){
+                $('#box').show(2000); //显示
+            })
+        })
+    
+    
+    </script>
+
+</head>
+<body>
+    <input type="button" id="btn1" value="隐藏">
+    <input type="button" id="btn2" value="显示">
+    <div id="box"></div>
+    
+</body>
+</html>

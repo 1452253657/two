@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        ////bind（）方法：第一个参数是事件名字，第二个参数是事件处理函数-匿名函数
+        $(function () {
+            $('#btn').bind({
+                'click': function () {
+                    alert('你又被小明打了')
+                }, 'mouseover': function () {
+                    $(this).css('backgroundColor', 'red');
+                }, 'mouseout': function () {
+                    $(this).css('backgroundColor', '');
+                }
+            })
+        })
+
+    </script>
+</head>
+
+<body>
+    <input type="button" value="点击" id="btn">
+    <br>绑定事件:
+    <br>bind:
+    <br>绑定多个事件
+    <br>参数:{"事件的类型":事件处理函数,....}
+    <br>delegate
+    <br>参数:父级元素.delegate("子级元素","事件类型",事件处理函数)
+    <br>on
+    <br>参数:父级元素.on("事件类型","子级元素",事件处理函数);
+
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            background-color: skyblue;
+        }
+    </style>
+
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+      // $(function () {
+      //     //需求：点击按钮，在div中创建一个超链接
+      //     $('#btn').click(function () {
+      //         var a = $("<a href='http://www.baidu.com'>百度</a>")
+      //        // console.log(a);
+      //        $('#box').append(a) //把超链接追加到div中
+      //     })
+      // })
+
+        $(function () {
+           $('#btn').click(function(){
+               $('#box').html('<p>这是一个古老的故事</p>')
+           })
+        })
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+    <input type="button" id="btn" value="创建元素">
+    <div id="box"></div>
+
+</body>
+
+</html>

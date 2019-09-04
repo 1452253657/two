@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div{
+        width: 200px;
+        height: 100px;
+        background-color: skyblue;
+    }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+    $(function(){
+        //通过on为按纽绑定点击的事件，创建一个p标签加入到div中，通过on的方式为div中的p绑定点击事件
+        $('#btn').on('click',function(){
+            $('#box').append($('<p>小明你别跑啊</p>'))
+            //on方法：两个参数：1事件的名字，2事件处理函数
+            //on方法：三个参数：1，事件的名字，2.要绑定事件的元素--p，3事件处理函数
+            //on是父级元素调用，目的：为子级元素去绑定事件
+            $('#box').on('click','p',function(){
+                alert('小明你怎么跑得这么快？')
+            })
+        })
+    })
+    
+    
+    </script>
+</head>
+<body>
+    <input type="button" id="btn" value="点击">
+    <div id="box"></div>
+    
+</body>
+</html>

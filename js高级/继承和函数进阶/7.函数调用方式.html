@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1普通函数调用     this指向window
+        //function fn (){
+        //    console.log(this);
+
+        //}
+        //fn ()；
+
+        //2方法调用    this指向调用该方法的对象
+        //var obj={
+        //fn:function (){
+        //    console.log(this);
+
+        //}
+        //}
+        //obj.fn ()；
+
+        //3作为构造函数调用    构造函数内部的this指向由该构造西数创建的对象
+
+        //4作为件的处理函数   触发该事件的对象
+        // btn.onclick = function(){
+        //     console.log(this);
+        //     
+        // }
+
+
+        //5作为定时器的参数   this 指向window
+        //setInterval (function (){
+        //     console.log(this);
+
+        //} ,1000)
+        //终结总结：函数内部的this，是由函数调用的时候来确定其指向的
+
+        function fn() {
+            console.log(this);
+
+        }
+        //   fn(); // this ->window
+
+      //  var obj = {
+      //      name: 'zs',
+      //       fn: fn
+      //  }
+      //  obj.fn()
+
+        
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

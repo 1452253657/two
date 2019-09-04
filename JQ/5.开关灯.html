@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+     .cls{
+        background-color: black;
+    }
+    
+    </style>
+    <script src="../JQ/jquery-1.12.2.js"></script>
+    <script>
+        //点击按钮设置body的背景颜色，实现网页开关灯的效果
+        //DOM的方式来操作
+        // window.onload = function () {
+        //     document.getElementById('btn').onclick = function () {
+        //         if (this.value == '关灯') {
+        //             document.body.style.backgroundColor = 'black'
+        //             this.value = '开灯'
+        //         } else {
+        //             document.body.style.backgroundColor = 'white'
+        //             this.value = '关灯'
+        //         }
+        //     }
+        // }
+     //   $(function () {
+
+            // $('#btn').click(function () {
+            //     if ($(this).val() == '关灯') {
+            //         $('body').css('backgroundColor', 'black')
+            //         $(this).val('开灯')
+            //     } else {
+            //         $('body').css('backgroundColor', 'white')
+            //         $(this).val('关灯');
+            //     }
+            // })
+
+        //})
+        $(function(){
+            $('#btn').click(function(){
+                $('body').toggleClass('cls') //切换类样式
+            })
+        })
+
+
+    </script>
+</head>
+
+<body>
+    <input type="button" value="开关灯" id="btn">
+    <!-- <input type="button" value="关灯" id="btn"> -->
+</body>
+
+</html>

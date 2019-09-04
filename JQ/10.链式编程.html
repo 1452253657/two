@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div{
+        width: 200px;
+        height: 100px;
+        background-color: skyblue;
+    }
+    </style>
+
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        //页面中有一个按钮，还有一个div，点击按钮的时候i让div中添加一个p标签,
+        //并显示内容，点击按钮的同时修改div的背景颜色
+
+        //链式编程：对象.方法（）.方法（）.方法（）；..|
+        $(function () {
+            $('#btn').click(function () {
+             //  $('#box').html('<p>这是一对p标签</p>')
+             //  $('#box').css('backgroundColor','yellowgreen')
+             $('#box').html('<p>这是一对p标签</p>') .css('backgroundColor','yellowgreen')
+               
+            })
+        })
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+    <input type="button" id="btn" value="点击">
+    <div id="box"></div>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    //页面加载事件
+   // window.onload=function(){
+   //     console.log('葫芦娃又去救爷爷了');
+   // }
+   // window.onload=function(){
+   //     console.log('葫芦娃，你爷爷呢');   
+   // }
+    </script>
+    <script src="../JQ/jquery-1.12.2.js"></script>
+    <script>
+        // jQuery的代码---和DOM 中的window.onload事件是相同的
+        //页面中所有的内容加载完华后才触发，标签，图片，文字内容.…
+      //  $(window).load(function () {
+      //      console.log('葫芦娃又去救爷爷了');
+      //  })
+      //  $(window).load(function () {
+      //      console.log('葫芦娃，你爷爷呢');
+      //  })
+
+        //第二种页面加载的事件的写法--- 在JQ里都是方法了
+        // // 页面中的基本的标签加载完毕后就可以触发了
+        // $(document).ready(function(){  //加载速度比上面的快
+        //     console.log('小明你别跑');   
+        // })
+
+        ////页面中基本的标签加载后就执行
+        jQuery(function() {
+            console.log('小明，站住，别跑啊1');
+
+        })
+        jQuery(function() {
+            console.log('小明，站住，别跑啊2');
+
+        })
+
+        
+        $(function(){
+            console.log('再跑就锤你了');
+        })
+        $(function(){
+            console.log('再跑就锤你了2');
+        })
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

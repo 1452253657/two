@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div{
+      height: 100px;
+      width: 200px;
+      background-color:skyblue;  
+    } 
+    .cls{
+        background-color: yellowgreen;
+    }
+    .cls2{
+        border:3px solid red;
+    }
+
+    </style>
+    <script src="../JQ/jquery-1.12.2.js"></script>
+    <script>
+        $(function(){
+            $('#btn').click(function(){
+               // $('#box').addClass('cls')////taddClass方法中类样式的名字前面没有点 
+                //$('#box').addClass('cls').addClass('cls2')
+
+                //另一种写法，addcLass添加样式的时候，多个类样式的名字中间用空格隔开
+                $('#box').addClass('cls cls2')
+
+            })
+
+            $('#btn2').click(function(){
+                //移除一个元素的类样式
+               // $('#box').removeClass('cls')
+                // $('#box').removeClass('cls cls2')
+                //移除div所有的类样式
+                $('#box').removeClass( )
+            })
+
+
+        })
+
+    
+    </script>
+</head>
+<body>
+    <input type="button" id="btn" value="添加">
+    <input type="button" id="btn2" value="移除">
+    <div id="box">
+
+    </div>
+    
+</body>
+</html>

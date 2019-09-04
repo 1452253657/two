@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div{
+        width: 200px;
+        height: 100px;
+        background-color:skyblue;
+    }
+    
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+
+    <script>
+        $(function(){
+            $('#btn').click(function(){
+                var a = $('<a></a>')
+                //attr（）；可以写两个参数：1参数；原性，2属性值
+                //attr（）；只写了一个参数，获取该元素的这个属性的值
+                a.attr('title','这是超链接') 
+                a.attr('href',"http://www.baidu.com") 
+                a.text('百度') 
+                $('#box').append(a)
+                console.log(a.attr('href'));
+                
+
+                
+            })
+        })
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+</head>
+<body>
+    <input type="button" value="设置属性值" id="btn">
+    <div id="box"></div>
+    
+</body>
+</html>

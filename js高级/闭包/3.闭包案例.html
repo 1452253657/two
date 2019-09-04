@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <!--  葫芦娃救爷爷
+    <button id="btn1">按钮1</button>
+    <button id="btn2">按钮2</button>
+    <button id="btn3">按钮3</button> -->
+
+   <!--  <script>
+    function ss(size){
+        return function(){
+            document.body.style.fontSize = size +'px'
+        }
+    }
+    btn1.onclick = ss(12)
+    btn2.onclick = ss(14)
+    btn3.onclick = ss(16)
+    </script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+    葫芦娃救爷爷
+    <div id="box">
+            <button size= "12">按钮1</button>
+            <button size= "14">按钮2</button>
+            <button size= "16">按钮3</button>
+    </div>
+
+    <script>
+     function ss(size){
+        return function(){
+            document.body.style.fontSize = size +'px'
+        }
+    }
+    var box = document.getElementById('box')
+    var buttons =box.children
+    
+    for(var i = 0; i< buttons.length;i++){
+       var btn = buttons[i]
+       var size = btn.getAttribute('size')
+       btn.onclick = ss(size)
+    }
+
+    
+    
+    
+
+
+
+            //定时器执行过程
+        //     console.log('start');
+
+        // setTimeout(function () {
+        //   console.log('timeout');
+        // }, 0);
+
+        // console.log('over');
+    
+    
+    
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+    $(function(){
+        $('#btn1').click(function(){
+            $(this).css('backgroundColor','skyblue')
+        })
+        //点击第二个按纽调用第一个按钮纽的点击事件--触发第一个按钮的点击事件
+        $('#btn2').click(function(){
+            //$('#btn1').click()
+             //trigget（）方法中需要写上触发事件的名字
+            //$('#btn1').trigger('click')//触发事件
+             $('#btn1').triggerHandler('click')
+        })
+    })
+    </script>
+</head>
+<body>
+    <input type="button" value="点击1" id="btn1">
+    <input type="button" value="点击2" id="btn2">
+    
+</body>
+</html>

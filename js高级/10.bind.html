@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var  a =123
+        function fn() {
+            console.log(this.a);
+            
+        }
+        //bind方法ES5中新增的方法
+        //新建一个方法，bind中的第一到数可以改变函数中的this的指向
+        
+        var o = {a:'abc'}
+         var fn1 =fn.bind(o)
+        fn1()  //相当于 o.fn
+        
+        
+        
+        
+        
+        </script>
+
+
+
+</body>
+</html>

@@ -37,10 +37,6 @@
         function bb(dom) {
             return document.createElement(dom)
         }
-
-
-
-
         box.appendChild(table)
         table.appendChild(thead)
         thead.appendChild(tr)
@@ -54,11 +50,8 @@
             tr.appendChild(th)
             th.innerHTML = headDatas[i];
         }
-
         var tbody = document.createElement('tbody')
         table.appendChild(tbody)
-
-
 
         function addContent() {
             for (var i = 0; i < datas.length; i++) {

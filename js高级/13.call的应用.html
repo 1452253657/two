@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+
+
+
+
+        //getElementsByTagName()
+        //伪数组
+        var obj = {
+            0: 100,
+            1: 34,
+            2: 'fs',
+            3: 354,
+            length: 4
+        }
+        // obj['4'] =66
+        // obj.length ++
+        // console.dir(obj)
+        Array.prototype.push.call(obj, 88) //添加
+        Array.prototype.splice.call(obj, 0, 3)// 从第一项开始，删除三个
+
+        console.dir(obj)
+
+        var obj = {
+            name: 'zs'
+        };
+
+        console.log(obj.toString());
+
+        var arr = [5, 9];
+        console.log(arr.toString());
+
+        console.log(Object.prototype.toString.call(arr));
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
