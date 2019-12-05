@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    //    函数的重载：就是函数名一样，但是参数的个数不一样或者类型不一样，或者返回值不一样。
+
+    //    function getNum(int a){
+    //
+    //    }
+    //
+    //    function getNum(int a ,int b){
+    //
+    //    }
+    //
+    //    function getNum(int a,string c){
+    //
+    //    }
+
+    //    在js中如果有重名的函数，后面的会将前面的覆盖
+
+    //    在js中是通过一个伪数组对象来完成的 arguments 它是函数中一个伪对象（伪数组）。相当与是将函数中传进来的参数做了一个备份
+
+    //    function getSum(a,b){
+    //        return a+b;
+    //    }
+    //    function getSum(a,b,c){
+    //        return a+b+c;
+    //    }
+    //
+    //    console.log(getSum(10,20));
+
+
+    //    function getSum(){
+    //        console.log(arguments[0]);
+    //        console.log(arguments[1]);
+    //        console.log(arguments[2]);
+    //        console.log(arguments[3]);
+    //    }
+    //    getSum(10,20,30,"你好");
+
+
+    //    求几个数的和
+    function getSum() {
+        var sum = 0;
+        for (var i = 0; i < arguments.length; i++) {
+            sum += arguments[i];
+        }
+        return sum;
+    }
+    console.log(getSum(10, 20, 50, "abc"));
+
+
+
+
+
+
+
+
+
+
+
+    
+    function sum2() {
+        var sum2 = 0;
+        for (var i = 0; i < arguments.length; i++) {
+            sum2 += arguments[i]
+
+        }
+        return sum2
+    }
+    console.log( sum2(12,7,"afd"));
+    
+</script>

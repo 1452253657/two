@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    //求一组数中的所有数的和
+    var arr = [12, 15, 8, 34, 64, 97, 56, 123, 15];
+    var sum = 0;
+    function bb() {
+        for (i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+    }
+    bb()
+    console.log(sum);
+
+    
+    
+    //console.log(sum / arr.length);
+
+
+
+    //求一组数中的所有数的和和平均值
+    //求一组数中的最大值
+    var arr1 = [12, 15, 8, 34, 64, 97, 56, 123, 15];
+    var max = arr1[0];
+    function aa() {
+        for (var i = 1; i < arr1.length; i++) {
+            if (max < arr1[i]) {
+                max = arr1[i];
+            }
+        }
+    }
+    aa()
+    console.log(max);
+
+//求一组数中的最小值
+    var arr2 = [12, 15, 8, 34, 64, 97, 56, 123, 15];
+    var min = arr2[0];
+    for(var i = 0; i< arr2.length;i++){
+       if(min>arr2[i]){
+           min=arr2[i]
+       }
+    }
+console.log(min);
+
+
+
+</script>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+    
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+            this.sayHi = function () {
+                console.log('Hello...')
+            }
+            //上述的name\age\sayHi就是实例成员
+        }
+        Person.hobby = 'running'
+        Person.climb = function () {
+            console.log('Climbing...')
+        }
+        //上述的hobby和climb就是静态成员
+        Person.prototype.jump = function () {
+            console.log('Jumping...')
+        }
+        //jump为p1的__proto__属性指向的它的原型对象上的成员
+        //===============那么，
+        var p1 = new Person('Lucy', 29)
+        console.log(p1.name);//'Lucy'
+        p1.age  //29
+        p1.sayHi() //Hello...
+        p1.jump()  // Jumping...
+        Person.climb() //Climbing...
+        Person.hobby  //running...
+        //==============但是
+        p1.climb()  //报错
+        Person.sayHi()  //报错
+        Person.jump() //报错
+       
+         
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
